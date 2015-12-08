@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <!-- GridView -->
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="match_parent"
+        android:layout_height="185dip"
+        android:scaleType="centerCrop"
+        />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+      <TextView
+          android:id="@+id/trackName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:textSize="20sp"
+          android:textColor="@android:color/white"
+          android:gravity="center_vertical"
+          android:singleLine="true"
+          android:ellipsize="end"
+          />
+
+      <TextView
+          android:id="@+id/trackArtistName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:textColor="@android:color/white"
+          android:textSize="18sp"
+          android:gravity="center_vertical"
+          android:singleLine="true"
+          android:ellipsize="end"
+          />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+      <ImageView
+          android:id="@+id/iconGenre"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:src="@drawable/ic_library_music_black_24dp"
+          />
+      <TextView
+          android:id="@+id/tvGenreName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/iconGenre"
+          android:layout_marginLeft="5dp"
+          android:textSize="18sp"
+          android:textColor="@color/colorAccent"
+          />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+      <ImageView
+          android:id="@+id/iconListen"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:src="@drawable/ic_headset_black_24dp"
+          />
+      <TextView
+          android:id="@+id/tvListenLink"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/iconListen"
+          android:layout_marginLeft="5dp"
+          android:text="@string/txt_radiostation_label"
+          android:textSize="18sp"
+          android:textColor="@color/colorAccent"
+          />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+      <ImageView
+          android:id="@+id/iconArtistUrl"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:src="@drawable/ic_public_black_24dp"
+          />
+      <TextView
+          android:id="@+id/tvLinkArtist"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/iconArtistUrl"
+          android:layout_marginLeft="5dp"
+          android:text="@string/txt_artisturl_label"
+          android:textSize="18sp"
+          android:textColor="@color/colorAccent"
+          />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+      <ImageView
+          android:id="@+id/iconMoney"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_attach_money_black_24dp"
+          />
+      <TextView
+          android:id="@+id/tvTrackPrice"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/iconMoney"
+          android:layout_marginLeft="5dp"
+          android:textColor="@color/colorAccent"
+          android:textSize="18sp"
+          />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+  </LinearLayout>
+</ScrollView>
