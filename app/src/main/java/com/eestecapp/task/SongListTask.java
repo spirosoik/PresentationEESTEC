@@ -54,15 +54,16 @@ public class SongListTask extends AsyncTask<String, Void, String> {
 
   @Override protected void onPostExecute(String json) {
     super.onPostExecute(json);
+    if (json != null) {
+      try {
+        JSONObject jsonObject = new JSONObject(json);
+        SongEntity[] songEntityList;
+        songEntityList = new Gson().fromJson(jsonObject.get("results").toString(), SongEntity[].class);
 
-    try {
-      JSONObject jsonObject = new JSONObject(json);
-      SongEntity[] songEntityList;
-      songEntityList = new Gson().fromJson(jsonObject.get("results").toString(), SongEntity[].class);
-
-      fragment.showListSongs(songEntityList);
-    } catch (JSONException e) {
-      e.printStackTrace();
+        fragment.showListSongs(songEntityList);
+      } catch (JSONException e) {
+        e.printStackTrace();
+      }
     }
   }
 }
